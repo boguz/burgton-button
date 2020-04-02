@@ -1,0 +1,27 @@
+{
+  "name": "burgton-button",
+  "version": "0.0.1",
+  "description": "A simple customizable lit-element burger button",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boguz/burgton-button.git"
+  },
+  "keywords": [
+    "burger",
+    "button",
+    "UI",
+    "button",
+    "webcomponents",
+    "lit-element"
+  ],
+  "author": "Boguz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/boguz/burgton-button/issues"
+  },
+  "homepage": "https://github.com/boguz/burgton-button#readme"
+}
