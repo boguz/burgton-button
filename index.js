@@ -1,3 +1,3 @@
-exports.test = function() {
-  console.log('BANANAS, this is a test');
-}
+import BurgtonButton from './src/burgton-button';
+
+customElements.define(BurgtonButton.is, BurgtonButton);
