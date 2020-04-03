@@ -4,7 +4,7 @@
   "description": "A simple customizable lit-element burger button",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint src/"
   },
   "repository": {
     "type": "git",
@@ -26,5 +26,10 @@
   "homepage": "https://github.com/boguz/burgton-button#readme",
   "dependencies": {
     "lit-element": "^2.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2"
   }
 }
