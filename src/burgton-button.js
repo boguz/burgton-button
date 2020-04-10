@@ -190,7 +190,6 @@ export default class BurgtonButton extends LitElement {
       'underlined',
       'vertical-rotator',
       'zoom',
-      'arrow-to-arrow',
     ];
   }
 

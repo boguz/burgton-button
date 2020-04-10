@@ -38,7 +38,7 @@ export default css`
         
         --burgton-button-label-font-size: 14px;
         --burgton-button-label-font-color: #999999;
-        --burgton-button-label-font-color-active: pink;
+        --burgton-button-label-font-color-active: #999999;
         --burgton-button-label-font-weight: inherit;
         --burgton-button-label-text-transform: uppercase;
       }
