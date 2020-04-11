@@ -42,6 +42,7 @@ export default class BurgtonButton extends LitElement {
     this._state = value;
     // eslint-disable-next-line no-unused-expressions
     this._state ? this.setAttribute('active', '') : this.removeAttribute('active');
+    this._dispatchEvent('burgton-button-state-change');
   }
 
   /**
@@ -203,13 +204,6 @@ export default class BurgtonButton extends LitElement {
     this.addEventListener('click', this._toggleTargetClasses);
   }
 
-  /**
-   * Watch for attribute changes.
-   *    1. Check if 'type' attribute has valid value
-   * @param name
-   * @param old
-   * @param value
-   */
   // eslint-disable-next-line no-unused-vars
   attributeChangedCallback(name, old, value) {
     if (name === 'type' && !this.acceptedTypes.includes(value)) {
@@ -226,16 +220,18 @@ export default class BurgtonButton extends LitElement {
   }
 
   /**
+   * @private
    * Handle click on the burgton-button element
    *    1. toggle state
    *
-   * @private
    */
   _handleClick() {
-    this.state = !this.hasAttribute('active');
+    this.toggleState();
+    this._dispatchEvent('burgton-button-click');
   }
 
   /**
+   * @private
    * Show debug information
    *    1. Burgton button element
    *    2. Burgton button properties
@@ -275,6 +271,7 @@ export default class BurgtonButton extends LitElement {
   }
 
   /**
+   * @private
    * Toggle target classes on defined target elements
    */
   _toggleTargetClasses() {
@@ -292,10 +289,54 @@ export default class BurgtonButton extends LitElement {
   }
 
   /**
+   * @private
    * Display warning on the console and add error to the errors array
    */
   _addError(errorMessage, errorType, errorProperty, errorValue) {
     console.warn(`BURGTON BUTTON - Ooops, something went wrong:\n\n${errorMessage}`);
     this.errors.push([errorType, errorProperty, errorValue]);
+  }
+
+  /**
+   *
+   * @param eventName
+   * @private
+   * Dispatch custom events so other elements can react to them
+   */
+  _dispatchEvent(eventName) {
+    const newEvent = new CustomEvent(eventName, {
+      bubbles: true,
+      composed: true,
+      detail: {
+        state: this.state,
+      },
+    });
+    this.dispatchEvent(newEvent);
+  }
+
+  /**
+   * @public
+   * Toggle the button state
+   */
+  toggleState() {
+    this.state = !this.hasAttribute('active');
+  }
+
+  /**
+   * @public
+   * Change state to activate the button
+   */
+  open() {
+    this.state = true;
+    this._dispatchEvent('burgton-button-open');
+  }
+
+  /**
+   * @public
+   * Change state to deactivate the button
+   */
+  close() {
+    this.state = false;
+    this._dispatchEvent('burgton-button-close');
   }
 }

@@ -21,8 +21,8 @@ A simple customizable burger button
 - [x] Add scale
 - [x] Add target
 - [x] Add label
-- [ ] Expose a toggle method that can be called from outside
-- [ ] Emit custom events so other components can react to them
+- [x] Expose a toggle method that can be called from outside
+- [x] Emit custom events so other components can react to them
 
 #### Animations
 - [x] Arrow left
