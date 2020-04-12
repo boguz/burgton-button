@@ -324,19 +324,19 @@ export default class BurgtonButton extends LitElement {
 
   /**
    * @public
-   * Change state to activate the button
+   * Change state to true to activate the button
    */
-  open() {
+  activate() {
     this.state = true;
-    this._dispatchEvent('burgton-button-open');
+    this._dispatchEvent('burgton-button-activate');
   }
 
   /**
    * @public
-   * Change state to deactivate the button
+   * Change state to false to deactivate the button
    */
-  close() {
+  deactivate() {
     this.state = false;
-    this._dispatchEvent('burgton-button-close');
+    this._dispatchEvent('burgton-button-deactivate');
   }
 }
