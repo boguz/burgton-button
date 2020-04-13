@@ -1,4 +1,4 @@
-# <burgton-button>
+# burgton-button
 `<burgton-button>` is a simple customisable lit-element burger button that you can use in your projects.
 
 Amongst other features, it allows you to choose from different animations, customise colors, animation speed and event toggle classes on multiple targets on the page.
