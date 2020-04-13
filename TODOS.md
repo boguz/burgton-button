@@ -1,20 +1,9 @@
 # TODOS:
 
-#### Todos
-- [ ] Add README Documentation
-    - [ ] Intro
-    - [ ] Demo + Doku Link
-    - [ ] Installation
-    - [ ] API
-    - [ ] Contributing
-
 
 #### Bugs
 - [ ] Cannot read property 'split' of null
 - [ ] Animation when scaled (the animation isn't smooth)
-
-
-#### Features
 
 
 #### Code
@@ -25,8 +14,3 @@
 - [ ] Add custom-components.json file (https://github.com/webcomponents/custom-elements-json)
 - [ ] Add tests
 - [ ] A11y
-
-
-#### Things to explain in Documentation
-- [ ] Add documentation link to the debug
-

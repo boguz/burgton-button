@@ -263,8 +263,7 @@ export default class BurgtonButton extends LitElement {
 
     console.groupCollapsed('4. BURGTON BUTTON INFORMATION:');
     console.log('Github: https://github.com/boguz/burgton-button'); // eslint-disable-line no-console
-    // todo: Add link to documentation
-    console.log('Documentation: coming soon...'); // eslint-disable-line no-console
+    console.log('https://boguz.github.io/burgton-button-docs/'); // eslint-disable-line no-console
     console.groupEnd();
 
     console.groupEnd();
