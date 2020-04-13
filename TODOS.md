@@ -15,3 +15,4 @@
 - [ ] Add custom-components.json file (https://github.com/webcomponents/custom-elements-json)
 - [ ] Add tests
 - [ ] A11y
+- [ ] Rewrite `targetSelectors` and `targetClasses`
