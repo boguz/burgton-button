@@ -87,5 +87,6 @@ You can use some attributes to customize your `<burgton-button>
 
 ## CONTRIBUTING
 If you have any ideas, suggestions or question you can open an issue on this repo.
+
 You can also find the burgton-buttons package on [NPM](https://www.npmjs.com/package/burgton-button).
 
