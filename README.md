@@ -9,7 +9,7 @@ You can find examples of the different button possibilities on the [documentatio
 
 
 ## DOCUMENTATION
-On the [documentation page](https://boguz.github.io/burgton-button-docs/) you can find a easy to follow "Getting Started" guide, as well as description on the API so you can fully customize your `<burgton-button>` element.
+On the [documentation page](https://boguz.github.io/burgton-button-docs/) you can find an easy to follow "Getting Started" guide, as well as a API description so you can fully customize your `<burgton-button>` element.
 
 
 ## GETTING STARTED
