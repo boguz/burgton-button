@@ -121,10 +121,12 @@ export default class BurgtonButton extends LitElement {
           this._targetSelectors = value;
         }
       });
+    } else {
+      this._targetSelectors = null;
     }
 
-    if (this._targetSelectors && this._targetClasses) {
-      if (this._targetSelectors.length !== this._targetClasses.length) {
+    if (this._targetSelectors && this.targetClasses) {
+      if (this._targetSelectors.length !== this.targetClasses.length) {
         this._addError(
           'The number of selectors in the "targetSelectors" property does not match the number of classes in the "targetClasses" attribute.',
           'not matched properties',
@@ -274,17 +276,14 @@ export default class BurgtonButton extends LitElement {
    * Toggle target classes on defined target elements
    */
   _toggleTargetClasses() {
-    const targetSelectors = this.getAttribute('targetSelectors').split(',').map((item) => item.trim());
-    const targetClasses = this.getAttribute('targetClasses').split(',').map((item) => item.trim());
+    if (this._targetSelectors && this._targetClasses) {
+      const targetSelectors = this.getAttribute('targetSelectors').split(',').map((item) => item.trim());
+      const targetClasses = this.getAttribute('targetClasses').split(',').map((item) => item.trim());
 
-    if (!this._targetSelectors || !this._targetClasses) {
-      console.warn('BURGTON BUTTON - Ooops, something went wrong:\n\nCould not toggle the target classes. Check the console or turn on the debug mode for more information.');
-      return;
+      targetSelectors.forEach((targetSelector, index) => {
+        document.querySelector(targetSelector).classList.toggle(targetClasses[index]);
+      });
     }
-
-    targetSelectors.forEach((targetSelector, index) => {
-      document.querySelector(targetSelector).classList.toggle(targetClasses[index]);
-    });
   }
 
   /**

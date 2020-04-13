@@ -2,8 +2,9 @@
 
 
 #### Bugs
-- [ ] Cannot read property 'split' of null
+- [x] Cannot read property 'split' of null
 - [ ] Animation when scaled (the animation isn't smooth)
+- [ ] If `targetClasses` comes before `targetSelector` there is an error
 
 
 #### Code
