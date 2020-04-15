@@ -55,7 +55,7 @@ You can use some attributes to customize your `<burgton-button>
 | Property | Description | Valid Values  | Default | Example |
 | -------- | ----------- | ------------- | ------- | ------- |
 | `--burgton-button-line-color` | Set the color of the button lines when it is inactive | CSS color value | #66cc99 | `--burgton-button-line-color: tomato;` |
-| `--burgton-button-line-color-active` | Set the color of the button lines when it is active | CSS color value | #66cc99 | `--burgton-button-line-color-active: purple;` |
+| `--burgton-button-line-color-active` | Set the color of the button lines when it is active. If not defined will inherit color from inactive state. | CSS color value | `--burgton-button-line-color` | `--burgton-button-line-color-active: purple;` |
 | `--burgton-button-animation-duration` | Set the animation duration | CSS time value | 500ms | `--burgton-button-animation-duration: .75s;` |
 | `--burgton-button-easing` | Set the animation easing | CSS easing value | ease-in-out | `--burgton-button-easing: ease-out;` |
 | `--burgton-button-scale` | Set the button scale (size) | Number (multiplier) | 1 | `--burgton-button-scale: 1.3;` |

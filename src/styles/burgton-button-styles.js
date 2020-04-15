@@ -30,7 +30,7 @@ export default css`
         
         --burgton-button-border-radius: 0px;
         --burgton-button-line-color: var(--burgton-button-default-line-color);
-        --burgton-button-line-color-active: var(--burgton-button-default-line-color);
+        --burgton-button-line-color-active: var(--burgton-button-line-color);
         --burgton-button-animation-duration: 500ms;
         --burgton-button-animation-delay: 0s;
         --burgton-button-easing: ease-in-out;
