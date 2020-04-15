@@ -86,7 +86,7 @@ You can use some attributes to customize your `<burgton-button>
 | `burgton-button-deactivate`  | Fires whenever the button state becomes inactive |
 
 ## CONTRIBUTING
-If you have any ideas, suggestions or question you can open an issue on this repo.
+If you have any ideas, suggestions or question you can open an issue on [github repo](https://github.com/boguz/burgton-button).
 
 You can also find the burgton-buttons package on [NPM](https://www.npmjs.com/package/burgton-button).
 
