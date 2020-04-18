@@ -4,7 +4,9 @@
   "description": "A simple customizable lit-element burger button",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint src/"
+    "lint": "eslint src/",
+    "test": "karma start",
+    "test:watch": "karma start --auto-watch=true --single-run=false"
   },
   "repository": {
     "type": "git",
@@ -28,8 +30,13 @@
     "lit-element": "^2.3.1"
   },
   "devDependencies": {
+    "@open-wc/semantic-dom-diff": "^0.17.7",
+    "@open-wc/testing": "^2.0.0",
+    "@open-wc/testing-karma": "^3.0.0",
+    "deepmerge": "^3.2.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
-    "eslint-plugin-import": "^2.20.2"
+    "eslint-plugin-import": "^2.20.2",
+    "karma": "^5.0.2"
   }
 }
