@@ -9,6 +9,7 @@ export default css`
     text-transform: var(--burgton-button-label-text-transform);
   }
   
+  .label,
   :host([active]) .label {
     color: var(--burgton-button-label-font-color-active);
   }

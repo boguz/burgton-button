@@ -69,8 +69,9 @@ export default class BurgtonButton extends LitElement {
    */
   set labelPosition(value) {
     const acceptedPositions = ['top', 'bottom', 'right', 'left'];
-    if (value && !acceptedPositions.includes(value)) {
+    if ((value && !acceptedPositions.includes(value)) || value === '') {
       this._logError(`"${value}" is not a valid labelPosition value`);
+      this.setAttribute('labelPosition', 'bottom');
       this._labelPosition = 'bottom';
     } else {
       this._labelPosition = value;
@@ -115,7 +116,7 @@ export default class BurgtonButton extends LitElement {
     this.type = 'default';
     this.state = false;
     this.label = null;
-    this.labelPosition = null;
+    this.labelPosition = 'bottom';
     this.acceptedTypes = [
       'default',
       'arrow-left',

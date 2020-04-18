@@ -3,7 +3,7 @@
 
 #### Bugs
 - [ ] Animation when scaled (the animation isn't smooth)
-
+- [ ] Invalid labelPosition doesn't set 'bottom' as default (need to change it in the markup?!)
 
 #### Code
 - [ ] Check if css custom properties are valid (revert to default?)

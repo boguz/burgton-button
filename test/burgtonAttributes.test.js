@@ -17,4 +17,28 @@ describe('Test BurgtonButton Attributes', () => {
     expect(el.type).to.equal('default');
   });
 
+  it('Accepts valid "top" as labelPosition', async () => {
+    const el = (await fixture(html`<burgton-button labelPosition="top"></burgton-button>`));
+    expect(el.labelPosition).to.equal('top');
+  });
+
+  it('Accepts valid "bottom" as labelPosition', async () => {
+    const el = (await fixture(html`<burgton-button labelPosition="bottom"></burgton-button>`));
+    expect(el.labelPosition).to.equal('bottom');
+  });
+
+  it('Accepts valid "right" as labelPosition', async () => {
+    const el = (await fixture(html`<burgton-button labelPosition="right"></burgton-button>`));
+    expect(el.labelPosition).to.equal('right');
+  });
+
+  it('Accepts valid "left" as labelPosition', async () => {
+    const el = (await fixture(html`<burgton-button labelPosition="left"></burgton-button>`));
+    expect(el.labelPosition).to.equal('left');
+  });
+
+  it('Invalid labelPosition value defaults to "bottom"', async () => {
+    const el = (await fixture(html`<burgton-button labelPosition="banana"></burgton-button>`));
+    expect(el.labelPosition).to.equal('bottom');
+  });
 });
