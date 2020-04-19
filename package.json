@@ -1,7 +1,7 @@
 {
   "name": "burgton-button",
-  "version": "0.0.14",
-  "description": "A simple customizable lit-element burger button",
+  "version": "0.0.15",
+  "description": "A simple, customizable and accessible lit-element menu burger button",
   "main": "index.js",
   "scripts": {
     "lint": "eslint src/",
@@ -15,10 +15,15 @@
   "keywords": [
     "burger",
     "button",
+    "burgerbutton",
     "UI",
     "button",
     "webcomponents",
-    "lit-element"
+    "lit-element",
+    "menu",
+    "menu button",
+    "accessibility",
+    "a11y"
   ],
   "author": "Boguz",
   "license": "MIT",
