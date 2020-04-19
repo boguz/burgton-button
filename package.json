@@ -1,6 +1,6 @@
 {
   "name": "burgton-button",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "A simple customizable lit-element burger button",
   "main": "index.js",
   "scripts": {

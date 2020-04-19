@@ -46,6 +46,7 @@ You can use some attributes to customize your `<burgton-button>
 | `labelPosition` | Defines the position of the label text in relation to the button | 'top', 'bottom', 'right', 'left' | - | `<burgton-button label="Menu" labelPosition="top"></burgton-button>` |
 | `targetSelectors` | Defines on which elements you want to toggle a class when the button is clicked. You can select multiple element by separating the selectors with a comma | CSS Selector | - | `<burgton-button targetSelectors="#circle-one, .circle-two" targetClasses="active, colorful"></burgton-button>` |
 | `targetClasses` | Defines the class that will be toggled on the selected element. The number of classes must match the number of selectors | CSS selector | - | `<burgton-button targetSelectors="#circle-three" targetClasses="active"></burgton-button>` |
+| `description` | Defines the default text for the 'aria-label' attribute. This value is overwritten with the `label` Text (if present) | String | 'Menu button' | `<burgton-button description="Menu on/off button"></burgton-button>` |
 | `noAnimation` | Disables the button animation, making the transition between inactive and active states immediate | - | - | `<burgton-button noAnimation></burgton-button>` |
 | `debug` | Enables the debug mode | - | - | `<burgton-button debug></burgton-button>` |
 
@@ -84,6 +85,11 @@ You can use some attributes to customize your `<burgton-button>
 | `burgton-button-click` | Fires whenever the button is clicked |
 | `burgton-button-activate` | Fires whenever the button state becomes active |
 | `burgton-button-deactivate`  | Fires whenever the button state becomes inactive |
+
+#### A11y
+Accessibility is very important, so we try to implement some good practices to reach as many users as possible and provide them a good experience.
+We do this mainly by adding several relevant aria attributes and also by giving you the possibility to change them via attributes.
+
 
 ## CONTRIBUTING
 If you have any ideas, suggestions or question you can open an issue on [github repo](https://github.com/boguz/burgton-button).
