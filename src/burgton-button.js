@@ -27,6 +27,7 @@ export default class BurgtonButton extends LitElement {
       labelPosition: { type: String },
       targetSelectors: { type: String },
       targetClasses: { type: String },
+      description: { type: String },
     };
   }
 
@@ -38,6 +39,7 @@ export default class BurgtonButton extends LitElement {
     this._state = value;
     // eslint-disable-next-line no-unused-expressions
     this._state ? this.setAttribute('active', '') : this.removeAttribute('active');
+    this.setAttribute('aria-pressed', this._state);
     this._dispatchEvent('burgton-button-state-change');
   }
 
@@ -110,6 +112,22 @@ export default class BurgtonButton extends LitElement {
     return this._targetClasses;
   }
 
+  /**
+   * Set the 'aria-label' attribute.
+   * This attribute is used by screen readers to 'describe' the element
+   */
+  set description(value) {
+    this._description = this.label ? this.label : value;
+    this.setAttribute('aria-label', this._description);
+  }
+
+  /**
+   * Get value of description property
+   */
+  get description() {
+    return this._description;
+  }
+
   constructor() {
     super();
 
@@ -117,6 +135,7 @@ export default class BurgtonButton extends LitElement {
     this.state = false;
     this.label = null;
     this.labelPosition = 'bottom';
+    this.description = 'Menu button';
     this.acceptedTypes = [
       'default',
       'arrow-left',
@@ -134,12 +153,14 @@ export default class BurgtonButton extends LitElement {
       'vertical-rotator',
       'zoom',
     ];
+
+    this.addA11yFeatures();
   }
 
   connectedCallback() {
     super.connectedCallback();
     this.addEventListener('click', this._handleClick);
-
+    this.addEventListener("keydown", this._handleKeyPressed);
     this.addEventListener('click', this._toggleTargetClasses);
   }
 
@@ -154,6 +175,17 @@ export default class BurgtonButton extends LitElement {
   }
 
   /**
+   * To improve accessibility we need to add some attributes to the element
+   * so it is seen as a 'button' also by screen readers
+   */
+  addA11yFeatures() {
+    this.setAttribute('role', 'button');
+    this.setAttribute('aria-pressed', false);
+    this.tabIndex = 0;
+    this.setAttribute('aria-haspopup', 'menu');
+  }
+
+  /**
    * @private
    * Handle click on the burgton-button element
    *    1. toggle state
@@ -161,6 +193,19 @@ export default class BurgtonButton extends LitElement {
   _handleClick() {
     this.toggleState();
     this._dispatchEvent('burgton-button-click');
+  }
+
+  /**
+   * Handle key press when the burgton-button is focused
+   * This is a functionality of the native <button> element.
+   * @param event
+   * @private
+   */
+  _handleKeyPressed(event) {
+    if (event.key === ' ' || event.key === 'Enter' || event.key === 'Spacebar') {
+      event.preventDefault();
+      this._handleClick();
+    }
   }
 
   /**

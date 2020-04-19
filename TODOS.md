@@ -11,5 +11,5 @@
 - [ ] Find way to load only the necessary css file (according to button type)
 - [ ] Add custom-components.json file (https://github.com/webcomponents/custom-elements-json)
 - [ ] Add tests
-- [ ] A11y
-- [ ] Test if `targetSelectors` and `targetClasses` order throws an error 
+- [ ] Improve A11y
+- [ ] Test if `targetSelectors` and `targetClasses` order throws an error
