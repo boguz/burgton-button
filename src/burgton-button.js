@@ -40,6 +40,7 @@ export default class BurgtonButton extends LitElement {
     // eslint-disable-next-line no-unused-expressions
     this._state ? this.setAttribute('active', '') : this.removeAttribute('active');
     this.setAttribute('aria-pressed', this._state);
+    this._toggleTargetClasses();
     this._dispatchEvent('burgton-button-state-change');
   }
 
@@ -160,8 +161,7 @@ export default class BurgtonButton extends LitElement {
   connectedCallback() {
     super.connectedCallback();
     this.addEventListener('click', this._handleClick);
-    this.addEventListener("keydown", this._handleKeyPressed);
-    this.addEventListener('click', this._toggleTargetClasses);
+    this.addEventListener('keydown', this._handleKeyPressed);
   }
 
   // eslint-disable-next-line no-unused-vars
