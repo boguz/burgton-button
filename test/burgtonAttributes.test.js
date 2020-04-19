@@ -1,7 +1,7 @@
 import { html, fixture, expect } from '@open-wc/testing';
 import BurgtonButton from '../index';
 
-describe('Test BurgtonButton Attributes', () => {
+describe('Test type attribute', () => {
   it('Has "default" as default value for the type property', async () => {
     const el = (await fixture(html`<burgton-button></burgton-button>`));
     expect(el.type).to.equal('default');
@@ -16,7 +16,9 @@ describe('Test BurgtonButton Attributes', () => {
     const el = (await fixture(html`<burgton-button type="banana"></burgton-button>`));
     expect(el.type).to.equal('default');
   });
+});
 
+describe('Test label attributes', () => {
   it('Accepts valid "top" as labelPosition', async () => {
     const el = (await fixture(html`<burgton-button labelPosition="top"></burgton-button>`));
     expect(el.labelPosition).to.equal('top');
@@ -40,5 +42,12 @@ describe('Test BurgtonButton Attributes', () => {
   it('Invalid labelPosition value defaults to "bottom"', async () => {
     const el = (await fixture(html`<burgton-button labelPosition="banana"></burgton-button>`));
     expect(el.labelPosition).to.equal('bottom');
+  });
+});
+
+describe('Test state attributes', () => {
+  it('Default state value if false', async () => {
+    const el = (await fixture(html`<burgton-button></burgton-button>`));
+    expect(el.state).to.equal(false);
   });
 });
