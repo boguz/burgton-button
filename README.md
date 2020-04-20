@@ -54,7 +54,7 @@ You can use some attributes to customize your `<burgton-button>` button
 
 | Property | Description | Valid Values  | Default | Example |
 | -------- | ----------- | ------------- | ------- | ------- |
-| `--burgton-button-line-color` | Set the color of the button lines when it is inactive | CSS color value | #66cc99 | `--burgton-button-line-color: tomato;` |
+| `--burgton-button-line-color` | Set the color of the button lines | CSS color value | #66cc99 | `--burgton-button-line-color: tomato;` |
 | `--burgton-button-line-color-active` | Set the color of the button lines when it is active. If not defined will inherit color from inactive state. | CSS color value | `--burgton-button-line-color` | `--burgton-button-line-color-active: purple;` |
 | `--burgton-button-animation-duration` | Set the animation duration | CSS time value | 500ms | `--burgton-button-animation-duration: .75s;` |
 | `--burgton-button-easing` | Set the animation easing | CSS easing value | ease-in-out | `--burgton-button-easing: ease-out;` |
@@ -67,7 +67,7 @@ You can use some attributes to customize your `<burgton-button>` button
 | `--burgton-button-label-text-transform` | Set the text-transform for the label text when the button is active | CSS text-transform value | uppercase | `--burgton-button-label-text-transform: capitalize;` |
 
 #### Methods
-`<burgton-button>` exposes several methods which you can call from you application. 
+`<burgton-button>` exposes several methods which you can call from your application. 
 
 | Method | Description | Example |
 | ------ | ----------- | ------- |
@@ -76,7 +76,7 @@ You can use some attributes to customize your `<burgton-button>` button
 | `.deactivate()` | Deactivate the button | `yourButton.deactivate();` |
 
 #### Events
-`<burgton-button> fires several custom events so you can react to them on you application.
+`<burgton-button> fires several custom events so you can react to them on your application.
 
 | Event | Description |
 | ----- | ----------- |

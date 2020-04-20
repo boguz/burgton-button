@@ -13,3 +13,4 @@
 - [ ] Add tests
 - [ ] Improve A11y
 - [ ] Test if `targetSelectors` and `targetClasses` order throws an error
+- [ ] Remove outline when button is clicked
