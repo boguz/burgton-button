@@ -27,7 +27,7 @@ You can use the <burgton-button> element on your project in 3 simple steps:
     <script type="module" src="node_modules/burgton-button/index.js"></script>
     ```
    
-3. Add the <burgton-button> element to you page and customize it to your taste
+3. Add the <burgton-button> element to your page and customize it to your taste
 
     ```html
     <burgton-button type="astronaut"></burgton-button>
@@ -37,18 +37,17 @@ You can use the <burgton-button> element on your project in 3 simple steps:
 ## API
 
 #### Attributes
-You can use some attributes to customize your `<burgton-button>
+You can use some attributes to customize your `<burgton-button>` button
 
 | Attribute | Description | Valid Values  | Default | Example |
 | --------- | ----------- | ------------- | ------- | ------- |
 | `type` | Defines the button animation | 'default', 'arrow-left', 'arrow-right', 'arrow-to-arrow', 'astronaut', 'async', 'crossed', 'ellipsis', 'fall-down', 'minus', 'rotator', 'spin', 'underlined', 'vertical-rotator', 'zoom' | 'default' | `<burgton-button type="astronaut"></burgton-button>` |
 | `label` | Defines the text that will be show with the button | String | - | `<burgton-button label="Menu"></burgton-button>` |
 | `labelPosition` | Defines the position of the label text in relation to the button | 'top', 'bottom', 'right', 'left' | - | `<burgton-button label="Menu" labelPosition="top"></burgton-button>` |
-| `targetSelectors` | Defines on which elements you want to toggle a class when the button is clicked. You can select multiple element by separating the selectors with a comma | CSS Selector | - | `<burgton-button targetSelectors="#circle-one, .circle-two" targetClasses="active, colorful"></burgton-button>` |
+| `targetSelectors` | Defines on which elements you want to toggle a class when the button is clicked. You can select multiple elements by separating the selectors with a comma | CSS Selector | - | `<burgton-button targetSelectors="#circle-one, .circle-two" targetClasses="active, colorful"></burgton-button>` |
 | `targetClasses` | Defines the class that will be toggled on the selected element. The number of classes must match the number of selectors | CSS selector | - | `<burgton-button targetSelectors="#circle-three" targetClasses="active"></burgton-button>` |
-| `description` | Defines the default text for the 'aria-label' attribute. This value is overwritten with the `label` Text (if present) | String | 'Menu button' | `<burgton-button description="Menu on/off button"></burgton-button>` |
+| `description` | Defines the default text for the 'aria-label' attribute. This value is overwritten with the `label` text (if present) | String | 'Menu button' | `<burgton-button description="Menu on/off button"></burgton-button>` |
 | `noAnimation` | Disables the button animation, making the transition between inactive and active states immediate | - | - | `<burgton-button noAnimation></burgton-button>` |
-| `debug` | Enables the debug mode | - | - | `<burgton-button debug></burgton-button>` |
 
 #### Styles
 `<burgton-button>` exposes several CSS custom properties that you can use to further customize it.
