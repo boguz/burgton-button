@@ -91,7 +91,7 @@ We do this mainly by adding several relevant aria attributes and also by giving 
 
 
 ## CONTRIBUTING
-If you have any ideas, suggestions or question you can open an issue on [github repo](https://github.com/boguz/burgton-button).
+If you have any ideas, suggestions or question you can open an issue on this [github repo](https://github.com/boguz/burgton-button).
 
-You can also find the burgton-buttons package on [NPM](https://www.npmjs.com/package/burgton-button).
+You can also find the burgton-button package on [NPM](https://www.npmjs.com/package/burgton-button).
 
