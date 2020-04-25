@@ -1,4 +1,4 @@
-import { css } from 'lit-element';
+import {css} from 'lit-element';
 import defaultStyles from './default';
 import arrowLeftStyles from './arrow-left';
 import arrowRightStyles from './arrow-right';
@@ -54,6 +54,10 @@ export default css`
       
       :host([active]) .line {
         background-color: var(--burgton-button-line-color-active);
+      }
+      
+      :host(:focus:not(.focus-visible)) {
+        outline: none;
       }
       
       /* NO ANIMATION */

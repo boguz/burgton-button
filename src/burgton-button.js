@@ -2,6 +2,7 @@
 
 import { LitElement, html } from 'lit-element';
 import styles from './styles/burgton-button-styles';
+import 'focus-visible/dist/focus-visible';
 
 export default class BurgtonButton extends LitElement {
   static get is() { return 'burgton-button'; }
