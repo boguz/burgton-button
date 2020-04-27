@@ -51,3 +51,20 @@ describe('Test state attributes', () => {
     expect(el.state).to.equal(false);
   });
 });
+
+describe('Test description attribute', () => {
+  it('Default description value is "Menu button"', async () => {
+    const el = (await fixture(html`<burgton-button></burgton-button>`));
+    expect(el.description).to.equal('Menu button');
+  });
+
+  it('Can add new description', async () => {
+    const el = (await fixture(html`<burgton-button description="test description"></burgton-button>`));
+    expect(el.description).to.equal('test description');
+  });
+
+  it('Empty description property defaults to "Menu Button"', async () => {
+    const el = (await fixture(html`<burgton-button description=""></burgton-button>`));
+    expect(el.description).to.equal('Menu button');
+  });
+});

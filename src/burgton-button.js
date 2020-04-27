@@ -119,7 +119,8 @@ export default class BurgtonButton extends LitElement {
    * This attribute is used by screen readers to 'describe' the element
    */
   set description(value) {
-    this._description = this.label ? this.label : value;
+    const validValue = value.length > 0 ? value : 'Menu button';
+    this._description = this.label ? this.label : validValue;
     this.setAttribute('aria-label', this._description);
   }
 
@@ -128,6 +129,15 @@ export default class BurgtonButton extends LitElement {
    */
   get description() {
     return this._description;
+  }
+
+  set label(value) {
+    this._label = value;
+    this.setAttribute('aria-label', this._label);
+  }
+
+  get label() {
+    return this._label;
   }
 
   constructor() {
