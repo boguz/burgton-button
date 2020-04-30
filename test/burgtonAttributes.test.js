@@ -19,22 +19,32 @@ describe('Test type attribute', () => {
 });
 
 describe('Test label attributes', () => {
-  it('Accepts valid "top" as labelPosition', async () => {
+  it('No default label value', async () => {
+    const el = (await fixture(html`<burgton-button></burgton-button>`));
+    expect(el.label).to.be.null;
+  });
+
+  it('Can add custom label', async () => {
+    const el = (await fixture(html`<burgton-button label="Menu"></burgton-button>`));
+    expect(el.label).to.equal('Menu');
+  });
+
+  it('Accepts "top" as labelPosition', async () => {
     const el = (await fixture(html`<burgton-button labelPosition="top"></burgton-button>`));
     expect(el.labelPosition).to.equal('top');
   });
 
-  it('Accepts valid "bottom" as labelPosition', async () => {
+  it('Accepts "bottom" as labelPosition', async () => {
     const el = (await fixture(html`<burgton-button labelPosition="bottom"></burgton-button>`));
     expect(el.labelPosition).to.equal('bottom');
   });
 
-  it('Accepts valid "right" as labelPosition', async () => {
+  it('Accepts "right" as labelPosition', async () => {
     const el = (await fixture(html`<burgton-button labelPosition="right"></burgton-button>`));
     expect(el.labelPosition).to.equal('right');
   });
 
-  it('Accepts valid "left" as labelPosition', async () => {
+  it('Accepts "left" as labelPosition', async () => {
     const el = (await fixture(html`<burgton-button labelPosition="left"></burgton-button>`));
     expect(el.labelPosition).to.equal('left');
   });
@@ -45,10 +55,37 @@ describe('Test label attributes', () => {
   });
 });
 
-describe('Test state attributes', () => {
-  it('Default state value if false', async () => {
+describe('Test target selectors', () => {
+  it('No default target selectors', async () => {
     const el = (await fixture(html`<burgton-button></burgton-button>`));
-    expect(el.state).to.equal(false);
+    expect(el.targetSelectors).to.be.undefined;
+  });
+
+  it('Can add single target selector', async () => {
+    const el = (await fixture(html`<burgton-button targetSelectors="#testID"></burgton-button>`));
+    expect(el.targetSelectors).to.equal('#testID');
+  });
+
+  it('Can add multiple target selectors', async () => {
+    const el = (await fixture(html`<burgton-button targetSelectors="#testIDOne, #testIDTwo"></burgton-button>`));
+    expect(el.targetSelectors).to.equal('#testIDOne, #testIDTwo');
+  });
+});
+
+describe('Test target classes', () => {
+  it('No default target classes', async () => {
+    const el = (await fixture(html`<burgton-button></burgton-button>`));
+    expect(el.targetClasses).to.be.undefined;
+  });
+
+  it('Can add single target class', async () => {
+    const el = (await fixture(html`<burgton-button targetClasses="active"></burgton-button>`));
+    expect(el.targetClasses).to.equal('active');
+  });
+
+  it('Can add multiple target classes', async () => {
+    const el = (await fixture(html`<burgton-button targetClasses="active, open"></burgton-button>`));
+    expect(el.targetClasses).to.equal('active, open');
   });
 });
 
@@ -68,3 +105,21 @@ describe('Test description attribute', () => {
     expect(el.description).to.equal('Menu button');
   });
 });
+
+describe('Test noAnimation attribute', () => {
+  it('Default animation duration is 500ms', async () => {
+    const el = (await fixture(html`<burgton-button></burgton-button>`));
+    const style = window.getComputedStyle(el);
+    const animationDuration = style.getPropertyValue('--burgton-button-animation-duration').trim();
+    expect(animationDuration).to.equal('500ms');
+  });
+});
+
+describe('Test state attributes', () => {
+  it('Default state value if false', async () => {
+    const el = (await fixture(html`<burgton-button></burgton-button>`));
+    expect(el.state).to.equal(false);
+  });
+});
+
+
