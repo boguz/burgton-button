@@ -38,7 +38,7 @@
   "devDependencies": {
     "@open-wc/semantic-dom-diff": "^0.17.7",
     "@open-wc/testing": "^2.0.0",
-    "@open-wc/testing-karma": "^3.0.0",
+    "@open-wc/testing-karma": "^4.0.9",
     "deepmerge": "^3.2.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
